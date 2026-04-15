@@ -1,21 +1,6 @@
-#if defined __linux__
 #include "/home/codeleaded/System/Static/Library/WindowEngine1.0.h"
 #include "/home/codeleaded/System/Static/Library/Random.h"
 #include "/home/codeleaded/System/Static/Library/TransformedView.h"
-#elif defined _WINE
-#include "/home/codeleaded/System/Static/Library/WindowEngine1.0.h"
-#include "/home/codeleaded/System/Static/Library/Random.h"
-#include "/home/codeleaded/System/Static/Library/TransformedView.h"
-#elif defined _WIN32
-#include "F:/home/codeleaded/System/Static/Library/WindowEngine1.0.h"
-#include "/home/codeleaded/System/Static/Library/Random.h"
-#include "/home/codeleaded/System/Static/Library/TransformedView.h"
-#elif defined(__APPLE__)
-#error "Apple not supported!"
-#else
-#error "Platform not supported!"
-#endif
-
 
 typedef unsigned char WFC_Option;
 
@@ -25,8 +10,6 @@ typedef unsigned char WFC_Option;
 #define WFC_OPTION_NONE		0U
 #define WFC_OPTION_1		1U
 #define WFC_OPTION_2		2U
-
-
 
 typedef struct WFC_Tile {
 	WFC_Option u;
